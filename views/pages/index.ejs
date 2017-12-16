@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body style="margin:0">
+  <div class="container">
+    <div id="start">
+      <div class="cell">
+          <img id="logo" src="images/Logo.png">
+          <h1 id="welcome">Welcome to</h1>
+          <button id="start_button" type="button" onclick="smoothScroll(document.getElementById('issue_select'))">Get Started</button>
+          <br>
+      </div>
+    </div>
+
+    <div id="issue_select">
+      <div class="cell">
+        <ul>
+          <li>Select from the options below</li>
+          <li style="font-size: 1.5em; font-weight: 200;">Otherwise, select other</li>
+        </ul>
+            <div id="init_issue">
+              <button id="cracked_screen" type="button" onclick="smoothScroll(document.getElementById('model_select'))"><img src="images/Screen_Cracked_Button.png"></button>
+              <button id="battery_dead" type="button" onclick="smoothScroll(document.getElementById('model_select'))"><img src="images/Battery_Dead_Button.png"></button><br>
+              <button class="other" id="other_button" type="button" onclick="smoothScroll(document.getElementById('requests'))"><img src="images/Other_Button.png"></button>
+            </div>
+    </div>
+
+    <div id="requests">
+      <div class="cell">
+          <p>Any additional info or requests</p>
+          <textarea type="text" rows="4" TextMode="MultiLine" placeholder="eg. My iPhone doesn't charge" id="userInput"=></textarea><br>
+          <button id="next_button" type="button" onclick="smoothScroll(document.getElementById('model_select')), request()"><img src="images/Next_Button.png"></button>
+          </div>
+    </div>
+
+    <div id="model_select">
+      <div class="cell">
+        <ul>
+          <li>Select your phone model</li>
+          <li style="font-size: 1.5em; font-weight: 200;">(iPhone exclusive)</li>
+        </ul>
+          <div id="model_buttons">
+            <ul>
+              <li>
+                <div id="seven">
+                    <div class="col1" id="model_7" type="button" onclick="smoothScroll(document.getElementById('color_select'))"><img src="images/iPhone_7_Button.png"></div>
+                    <div class="col2" id="model_7+" type="button" onclick="smoothScroll(document.getElementById('color_select'))"><img src="images/iPhone_7_Plus_Button.png"></div>
+                </div>
+              </li>
+              <li>
+                <div id="six_s">
+                    <div class="col1" id="model_6s" type="button" onclick="smoothScroll(document.getElementById('color_select'))"><img src="images/iPhone_6s_Button.png"></div>
+                    <div class="col2" id="model_6s+" type="button" onclick="smoothScroll(document.getElementById('color_select'))"><img src="images/iPhone_6s_Plus_Button.png"></div>
+                </div>
+                <div id="six">
+                    <div class="col1" id="model_6" type="button" onclick="smoothScroll(document.getElementById('color_select'))"><img src="images/iPhone_6_Button.png"></div>
+                    <div class="col2" id="model_6+" type="button" onclick="smoothScroll(document.getElementById('color_select'))"><img src="images/iPhone_6_Plus_Button.png"></div>
+                </div>
+              </li>
+              <li>
+                <div id="five_s">
+                    <div class="col1" id="model_5s" type="button" onclick="smoothScroll(document.getElementById('color_select'))"><img src="images/iPhone_5s_Button.png"></div>
+                    <div class="col2" id="model_5se" type="button" onclick="smoothScroll(document.getElementById('color_select'))"><img src="images/iPhone_5se_Button.png"></div>
+                </div>
+                <div id="five">
+                    <div class="col1" id="model_5" type="button" onclick="smoothScroll(document.getElementById('color_select'))"><img src="images/iPhone_5_Button.png"></div>
+                    <div class="col2" id="model_5c" type="button" onclick="smoothScroll(document.getElementById('color_select'))"><img src="images/iPhone_5c_Button.png"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+
+    <div id="color_select">
+      <div class="cell">
+          <div id="box">
+            <ul>
+              <li style="color: White;">Select iPhone Screen Color</li>
+              <li style="color: White; font-size: 1.5em; font-weight: 200;">(The home button color)</li>
+            </ul>
+            <div id="color_choice">
+              <button id="black_screen" type="button" onclick="smoothScroll(document.getElementById('estimate'))"><img src="images/iPhone_Black_Button.png"></button>
+              <button id="white_screen" type="button" onclick="smoothScroll(document.getElementById('estimate'))"><img src="images/iPhone_White_Button.png"></button>
+            </div>
+          </div>
+          </div>
+    </div>
+
+    <div id="estimate">
+      <div class="cell">
+            <div id="cost">
+              <p1>Total Cost</p1>
+              <br>
+              <p2>Screen repairs come with a free tempered glass screen protector</p2>
+            </div>
+            <div id="price_display">
+                <p8>$</p8>
+                <p9 id="price"></p9>
+            </div>
+            <button id="last_step" type="button" onclick="smoothScroll(document.getElementById('UserInfo'))"><img src="images/Last_Step_Button.png"></button>
+        </div>
+    </div>
+    <div class="UserInfo" id="UserInfo">
+      <ul>
+        <li>Your Name</li>
+        <li><textarea type="text" rows="1" TextMode="MultiLine" placeholder="Mary Poppins" id="NameInput"></textarea></li>
+        <br>
+        <li>Contact Info</li>
+        <li><textarea type="text" rows="1" TextMode="MultiLine" placeholder="Phone Number or Email" id="ContactInput"></textarea></li>
+      </ul>
+      <button id="submit" type="button" onclick="alert('thanx');"><img src="images/Submit_Button.png"></button>
+    </div>
+  </div>
+
+  <script src="scripts/estimate.js"></script>
+  <script src="scripts/smoothScroll.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!--script type="text/javascript" src="materialize/js/materialize.min.js"></script-->
+</body>
+
+</html>

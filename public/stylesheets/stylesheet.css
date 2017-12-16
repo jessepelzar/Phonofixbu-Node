@@ -1,0 +1,387 @@
+.container {
+  margin: 0 auto;
+  padding: 0 0 0 0;
+  width: 100%;
+  position: relative;
+}
+
+.cell {
+  margin: 0 auto;
+  height: 95vh inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.col2 {
+  margin-top: 3vh;
+}
+
+#start {
+  background-color: #FFF;
+}
+
+#issue_select {
+  background-color: #FFF;
+}
+
+#requests {
+  background-color: #EF586F;
+}
+
+#model_select {
+  background-color: #FFF;
+}
+
+#color_select {
+  background-color: #7BD2F6;
+}
+
+#estimate {
+  background-color: #6D65AC;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+br {
+  line-height: 10vh;
+}
+
+h1 {
+  font-size: 6vh;
+  font-weight: 100;
+  text-align: center;
+  color: Black;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 10vh;
+  font-size-adjust: 5%;
+
+}
+/* Issue Select */
+ul {
+  padding-top: 5vh;
+  padding-left: 0;
+  list-style: none;
+}
+li {
+  font-size: 2em;
+  font-weight: 300;
+  padding-top: 1vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+
+/* Requests */
+p {
+  font-size: 3vh;
+  font-weight: 200;
+  color: White;
+  line-height: 2;
+  padding-top: 10vh;
+  padding-bottom: 7vh;
+}
+/* color select */
+p4 {
+  font-size: 2em;
+  font-weight: 300;
+  padding-left: 5vw;
+  padding-top: 5vh;
+  color: White;
+}
+
+p5 {
+  font-size: 1.5em;
+  font-weight: 200;
+  padding-left: 5vw;
+  line-height: 0.5;
+  padding-bottom: 3vh;
+  color: White;
+}
+/* estimate */
+p1 {
+  font-size: 7vh;
+  text-align: center;
+  font-weight: 200;
+  color: White;
+  position: relative;
+}
+
+p2 {
+  font-size: 3vh;
+  position: relative;
+  text-align: center;
+  font-weight: 200;
+  color: White;
+}
+/* Price Display */
+p8 {
+  font-size: 7vh;
+  text-align: center;
+  font-weight: 200;
+  color: White;
+  position: relative;
+}
+
+p9 {
+  line-height: 25vh;
+  font-size: 8vh;
+  position: relative;
+  text-align: center;
+  font-weight: 200;
+  color: White;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15vh;
+  width: 50%;
+  max-width: 40vh;
+}
+
+#start_button {
+  width: 30vh;
+  border: 2px;
+  border-style: solid;
+  border-color: #93CA68;
+  padding: 4vh;
+  font-size: 3vh;
+  font-weight: 100;
+  text-align: center;
+  color: Black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20vh;
+}
+
+#init_issue {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-top: 10vh;
+}
+
+#init_issue button{
+  margin: 4vh;
+  width: 40%;
+  max-width: 200px;
+}
+
+#cracked_screen {
+  width: 20%;
+  vertical-align: middle;
+  float: 5% left;
+}
+
+#battery_dead {
+  width: 20%;
+  vertical-align: middle;
+  float: 5% right;
+}
+
+#cracked_screen img {
+  width: 100%;
+  vertical-align: middle;
+  float: 6% left;
+}
+
+#battery_dead img {
+  width: 100%;
+  vertical-align: middle;
+  float: 6% right;
+}
+
+.other img{
+  width: 100%;
+  vertical-align: middle;
+}
+
+.other {
+  margin: 0 auto;
+  padding-bottom: 10vh;
+}
+
+#requests {
+  text-align: center;
+  height: 95vh;
+}
+
+#requests textarea[type=text] {
+  background: transparent url(http://s24.postimg.org/62v2ipx81/underline.png) repeat;
+  border: none;
+  height: 20vh;
+  width: 60vw;
+  overflow: auto;
+  line-height: 30px;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #fff;
+}
+
+#requests textarea::placeholder {
+  line-height: 30px;
+  font-size: 1em;
+  font-weight: 300;
+  color: #932E42;
+}
+
+#next_button  {
+  width: 30%;
+  max-width: 200px;
+  margin: 10vh 0 0 0;
+}
+
+#next_button img{
+  width: 100%;
+  vertical-align: middle;
+}
+
+#model_buttons {
+  text-align: center;
+  margin: 2vh 0 0 0; /*top right bottom left*/
+  padding-bottom: 10vh;
+  vertical-align: middle;
+}
+
+ #model_buttons img {
+   width: 60%;
+   height: inherit;
+   display: block;
+   display: inline-table;
+ }
+
+ #model_buttons div{
+   padding-top: 3vh;
+   display: inline-block;
+ }
+
+#model_buttons ul {
+  list-style-type: none;
+}
+
+#color_select {
+  min-height: 95vh;
+}
+
+#color_choice {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15vh;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+}
+
+#black_screen {
+  width: 40vh;
+  vertical-align: middle;
+  margin-bottom: 15vh;
+  max-width: 35vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: none;
+  padding-bottom: none;
+}
+
+#white_screen {
+  width: 40vh;
+  vertical-align: middle;
+  margin-bottom: 15vh;
+  max-width: 35vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: none;
+  padding-bottom: none;
+}
+
+#black_screen img {
+  width: 100%;
+  vertical-align: middle;
+  float: 6vw left;
+}
+
+#white_screen img {
+  width: 100%;
+  vertical-align: middle;
+  float: 6vw right;
+}
+
+#estimate {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#price_display {
+  margin: 0 auto;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  border-radius: 100%;
+  width: 25vh;
+  height: 25vh;
+  border: 2px solid;
+  border-color: White;
+  display: block;
+}
+
+#cost {
+  margin: 0 auto;
+  padding-top: 10vh;
+  max-width: 50vh;
+}
+
+#last_step  {
+  width: 30%;
+  max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: 10vh;
+}
+
+#last_step img{
+  width: 100%;
+  vertical-align: middle;
+}
+
+#UserInfo {
+  height: 100vh;
+}
+
+#UserInfo textarea[type=text] {
+  margin-top: 5vh;
+  border: none;
+  height: 6vh;
+  width: 60vw;
+  overflow: auto;
+  line-height: 30px;
+  font-size: 3vh;
+  font-weight: 300;
+  color: #000;
+  border-bottom: 2px;
+  border-bottom-style: solid;
+  border-color: Black;
+}
+
+#UserInfo textarea::placeholder {
+  line-height: 30px;
+  font-size: 3vh;
+  font-weight: 300;
+  color: #dfdfdf;
+}
+
+#submit {
+  margin: 0 auto;
+  display: block;
+  width: 25vh;
+}
+
+#submit img {
+  margin-top: 20vh;
+  margin-bottom: 5vh;
+  vertical-align: middle;
+  width: 100%;
+}
