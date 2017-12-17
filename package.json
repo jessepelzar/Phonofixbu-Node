@@ -16,7 +16,7 @@
     "express": "^4.16.2",
     "requests": "^0.2.2",
     "sendgrid": "^5.2.3",
-    "verbose": "^0.2.3",
+    "verbose": "^0.2.3"
   },
   "devDependencies": {
     "request": "^2.83.0",
