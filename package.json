@@ -1,0 +1,36 @@
+{
+  "name": "Phonofixbu-Node",
+  "version": "1.0.0",
+  "description": "submit a request to hav a iPhone repaired",
+  "engines": {
+    "node": "8.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "cli": "^1.0.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "requests": "^0.2.2",
+    "sendgrid": "^5.2.3",
+    "verbose": "^0.2.3",
+    "yarn": "^1.3.2"
+  },
+  "devDependencies": {
+    "request": "^2.83.0",
+    "tape": "^4.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jessepelzar/Phonofixbu-Node"
+  },
+  "keywords": [
+    "screen",
+    "cracked",
+    "phonofixbu"
+  ],
+  "license": "MIT"
+}
