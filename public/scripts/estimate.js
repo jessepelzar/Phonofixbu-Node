@@ -13,19 +13,6 @@ var iPhone_5 = document.getElementById('model_5');
 var dispPrice = document.getElementById('price');
 
 
-// //document.getElementById('cracked_screen').onclick = function() {
-//   var select = 1;
-// };
-// //document.getElementById('battery_dead').onclick = function() {
-//   var select = 0;
-// };
-//
-// //if (select === 0) {
-//   var prices =  ["50", "60", "70", "80", "100", "120"];
-// }
-// //else if (select === 1) {
-//   var prices = ["30", "40", "50", "60", "80", "100"];
-// }
 var prices =  ["50", "60", "70", "80", "100", "120"];
 dispPrice.innerHTML = "0";
 iPhone_7p.addEventListener('click', () => {
@@ -59,7 +46,14 @@ iPhone_5.addEventListener('click', () => {
     dispPrice.innerHTML = prices[0];
 });
 
+function issueSel() {
+  document.getElementById('cracked_screen').onclick = function() {
+    alert('cracked screen selected');
+  }
 
+
+
+}
 
 function request () {
   var userInput = document.getElementById("userInput").value;
