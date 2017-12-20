@@ -1,3 +1,7 @@
+ window.sScroll = function(dest) {
+    smoothScroll(document.getElementById(dest));
+}
+
 window.smoothScroll = function(target) {
     var scrollContainer = target;
     do { //find scroll container

@@ -51,8 +51,6 @@ function issueSel() {
     alert('cracked screen selected');
   }
 
-
-
 }
 
 function request () {
