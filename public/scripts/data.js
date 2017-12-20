@@ -32,30 +32,55 @@ var screen_black = document.getElementById('black_screen');
 var screen_white = document.getElementById('white_screen');
 var color_sel = ['Black', 'White'];
 
+var name_input = document.getElementById('NameInput');
+var contact_input = document.getElementById('ContactInput');
+
+var submit_bttn = document.getElementById('submit');
+
 function initIssueRes(issue_bttn) {
   if (issue_bttn == "cracked_screen") {
-    buildStr(issue_bttn = issue_sel[0],"");
+    buildStr(issue_bttn = issue_sel[0], "", "", "");
   }
   else if (issue_bttn == "battery_dead") {
-    buildStr(issue_bttn = issue_sel[1],"");
+    buildStr(issue_bttn = issue_sel[1], "", "", "");
   }
   else if (issue_bttn == "other_button") {
-    buildStr(issue_bttn = issue_sel[2],"");
+    buildStr(issue_bttn = issue_sel[2], "", "", "");
   }
   else {
-    buildStr(issue_bttn = NULL,"");
+    buildStr(issue_bttn = NULL, "", "", "");
   }
 }
 function modelRes(model_bttn) {
   for (i = 0; i < model_sel.length; i++) {
     if (model_bttn == model_id[i]){
-    buildStr("", model_bttn = model_sel[i]);
+    buildStr("", model_bttn = model_sel[i], "", "");
     }
   }
 }
+function colorRes(color_bttn) {
+  if (color_bttn == "black_screen") {
+    buildStr("", "", color_bttn = color_sel[0], "");
+  }
+  else if (color_bttn == "white_screen") {
+    buildStr("", "", color_bttn = color_sel[1], "");
+  }
+}
+function userInfo(name, contact) {
+  name = name_input.value;
+  contact = contact_input.value;
+  var user_info = name + " " + contact;
+  buildStr("", "", "", user_info);
+}
+
+
+
 var message = "";
-function buildStr(issue, model) {
-  message = issue + " " + model;
+function buildStr(issue, model, color, info) {
+  message = issue + "" + model + "" + color + "" + info;
+  // if (dispPrice.innerHTML !== "0") {
+  // message = message + "\n" + "$" + dispPrice.innerHTML;
+  // }
   updateReq(message);
 }
 function updateReq(message){

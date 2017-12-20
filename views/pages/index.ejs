@@ -83,8 +83,8 @@
               <li style="color: White; font-size: 1.5em; font-weight: 200;">(The home button color)</li>
             </ul>
             <div id="color_choice">
-              <button id="black_screen" type="button" onclick="sScroll('estimate')"><img src="images/iPhone_Black_Button.png"></button>
-              <button id="white_screen" type="button" onclick="sScroll('estimate')"><img src="images/iPhone_White_Button.png"></button>
+              <button id="black_screen" type="button" onclick="colorRes(this.id); sScroll('estimate')"><img src="images/iPhone_Black_Button.png"></button>
+              <button id="white_screen" type="button" onclick="colorRes(this.id); sScroll('estimate')"><img src="images/iPhone_White_Button.png"></button>
             </div>
           </div>
           </div>
@@ -113,7 +113,7 @@
         <li>Contact Info</li>
         <li><textarea type="text" rows="1" TextMode="MultiLine" placeholder="Phone Number or Email" id="ContactInput"></textarea></li>
       </ul>
-      <button id="submit" type="button" onclick="alert('thanx');"><img src="images/Submit_Button.png"></button>
+      <button id="submit" type="button" onclick="userInfo('NameInput', 'ContactInput'); alert('thanx');"><img src="images/Submit_Button.png"></button>
     </div>
   </div>
 
