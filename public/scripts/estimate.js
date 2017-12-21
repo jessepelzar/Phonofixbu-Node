@@ -50,7 +50,6 @@ function issueSel() {
   document.getElementById('cracked_screen').onclick = function() {
     alert('cracked screen selected');
   }
-
 }
 
 function request () {

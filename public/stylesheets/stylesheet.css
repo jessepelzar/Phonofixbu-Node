@@ -41,6 +41,8 @@ body {
   background-color: #6D65AC;
 }
 
+button:focus {outline:0;}
+input:focus {outline:0;}
 button {
   background: none;
   border: none;
@@ -167,7 +169,7 @@ p9 {
   padding-top: 10vh;
 }
 
-#init_issue button{
+#init_issue input{
   margin: 4vh;
   width: 40%;
   max-width: 200px;
@@ -185,24 +187,9 @@ p9 {
   float: 5% right;
 }
 
-#cracked_screen img {
+#other {
   width: 100%;
   vertical-align: middle;
-  float: 6% left;
-}
-
-#battery_dead img {
-  width: 100%;
-  vertical-align: middle;
-  float: 6% right;
-}
-
-.other img{
-  width: 100%;
-  vertical-align: middle;
-}
-
-.other {
   margin: 0 auto;
   padding-bottom: 10vh;
 }
@@ -227,8 +214,8 @@ p9 {
 #requests textarea::placeholder {
   line-height: 30px;
   font-size: 1em;
-  font-weight: 300;
-  color: #932E42;
+  font-weight: 100;
+  color: #fff;
 }
 
 #next_button  {
@@ -282,7 +269,7 @@ p9 {
   width: 40vh;
   vertical-align: middle;
   margin-bottom: 15vh;
-  max-width: 35vh;
+  max-width: 80vw;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: none;
@@ -293,7 +280,7 @@ p9 {
   width: 40vh;
   vertical-align: middle;
   margin-bottom: 15vh;
-  max-width: 35vh;
+  max-width: 80vw;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: none;
@@ -349,9 +336,13 @@ p9 {
 
 #UserInfo {
   height: 100vh;
+  font-weight: 300;
+  padding-top: 1vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
 }
 
-#UserInfo textarea[type=text] {
+#UserInfo input[type=text] {
   margin-top: 5vh;
   border: none;
   height: 6vh;
@@ -364,24 +355,22 @@ p9 {
   border-bottom: 2px;
   border-bottom-style: solid;
   border-color: Black;
+  padding-left: 5vh;
 }
 
-#UserInfo textarea::placeholder {
+#UserInfo input::placeholder {
   line-height: 30px;
   font-size: 3vh;
   font-weight: 300;
   color: #dfdfdf;
 }
 
-#submit {
+input[type=submit] {
+  background: transparent url('https://i.imgur.com/ATIuXPy.png') no-repeat center scroll;
+  border: none;
+
+  padding-top: 20vh;
   margin: 0 auto;
   display: block;
   width: 25vh;
-}
-
-#submit img {
-  margin-top: 20vh;
-  margin-bottom: 5vh;
-  vertical-align: middle;
-  width: 100%;
 }

@@ -1,8 +1,7 @@
 var issue_cracked = document.getElementById('cracked_screen');
 var issue_battery = document.getElementById('battery_dead');
 var issue_other = document.getElementById('other_button');
-var issue_sel = ["cracked screen", "battery replacement", "other"];
-
+var other_text = document.getElementById('userInput');
 var iPhone_7p = document.getElementById('model_7+');
 var iPhone_7 = document.getElementById('model_7');
 var iPhone_6sp = document.getElementById('model_6s+');
@@ -13,6 +12,12 @@ var iPhone_5se = document.getElementById('model_5se');
 var iPhone_5s = document.getElementById('model_5s');
 var iPhone_5c = document.getElementById('model_5c');
 var iPhone_5 = document.getElementById('model_5');
+var screen_black = document.getElementById('black_screen');
+var screen_white = document.getElementById('white_screen');
+
+var submit_bttn = document.getElementById('submit');
+
+var issue_sel = ["cracked screen", "battery replacement", "other"];
 var model_id = [
       'model_5' , 'model_5c',
       'model_5s', 'model_5se',
@@ -27,65 +32,124 @@ var model_sel = [
       'iPhone 6s', 'iPhone 6s Plus',
       'iPhone 7' , 'iPhone 7 Plus'
     ];
-
-var screen_black = document.getElementById('black_screen');
-var screen_white = document.getElementById('white_screen');
 var color_sel = ['Black', 'White'];
 
-var name_input = document.getElementById('NameInput');
-var contact_input = document.getElementById('ContactInput');
-
-var submit_bttn = document.getElementById('submit');
 
 function initIssueRes(issue_bttn) {
   if (issue_bttn == "cracked_screen") {
-    buildStr(issue_bttn = issue_sel[0], "", "", "");
+    issue_bttn = issue_sel[0];
   }
   else if (issue_bttn == "battery_dead") {
-    buildStr(issue_bttn = issue_sel[1], "", "", "");
+    issue_bttn = issue_sel[1];
   }
   else if (issue_bttn == "other_button") {
-    buildStr(issue_bttn = issue_sel[2], "", "", "");
+    issue_bttn = issue_sel[2];
   }
   else {
-    buildStr(issue_bttn = NULL, "", "", "");
+    issue_bttn = NULL;
+  }
+  console.log(issue_bttn);
+  return issue_bttn;
+}
+function addRequest(addReqId) {
+  if (other_text !== "") {
+    return other_text.value;
   }
 }
 function modelRes(model_bttn) {
   for (i = 0; i < model_sel.length; i++) {
     if (model_bttn == model_id[i]){
-    buildStr("", model_bttn = model_sel[i], "", "");
+      console.log(model_sel[i]);
+      return model_bttn = model_sel[i];
     }
   }
 }
+
 function colorRes(color_bttn) {
   if (color_bttn == "black_screen") {
-    buildStr("", "", color_bttn = color_sel[0], "");
+    color_bttn = color_sel[0];
   }
   else if (color_bttn == "white_screen") {
-    buildStr("", "", color_bttn = color_sel[1], "");
+    color_bttn = color_sel[1];
+  }
+  console.log(color_bttn);
+  return color_bttn;
+}
+
+submit_bttn.addEventListener('click', () => {
+  var one = initIssueRes();
+  var two = modelRes();
+  var three = colorRes();
+  console.log(one + two + three);
+});
+
+
+
+
+/*
+function initIssueRes(issue_bttn) {
+  if (issue_bttn == "cracked_screen") {
+    buildStr(issue_bttn = issue_sel[0], "", "", "", "");
+  }
+  else if (issue_bttn == "battery_dead") {
+    buildStr(issue_bttn = issue_sel[1], "", "", "", "");
+  }
+  else if (issue_bttn == "other_button") {
+    buildStr(issue_bttn = issue_sel[2], "", "", "", "");
+    //buildStr(textReq(), "", "", "", "");
+    // + other_text.value
+  }
+  else {
+    buildStr(issue_bttn = NULL, "", "", "", "");
   }
 }
-function userInfo(name, contact) {
-  name = name_input.value;
-  contact = contact_input.value;
-  var user_info = name + " " + contact;
-  buildStr("", "", "", user_info);
+
+function addRequest(addReqId) {
+  if (other_text !== "") {
+    buildStr(other_text.value, "","","","");
+  }
 }
 
-
-
-var message = "";
-function buildStr(issue, model, color, info) {
-  message = issue + "" + model + "" + color + "" + info;
-  // if (dispPrice.innerHTML !== "0") {
-  // message = message + "\n" + "$" + dispPrice.innerHTML;
-  // }
-  updateReq(message);
+function modelRes(model_bttn) {
+  for (i = 0; i < model_sel.length; i++) {
+    if (model_bttn == model_id[i]){
+    buildStr("", model_bttn = model_sel[i], "", "", "");
+    }
+  }
 }
-function updateReq(message){
-  console.log(message);
+
+function colorRes(color_bttn) {
+  if (color_bttn == "black_screen") {
+    buildStr("", "", color_bttn = color_sel[0], "", "");
+  }
+  else if (color_bttn == "white_screen") {
+    buildStr("", "", color_bttn = color_sel[1], "", "");
+  }
 }
+
+function buildStr(issue, model, color, name, contact) {
+
+  var str = "".concat(issue, "", model, "", color);
+    //console.log(str);
+
+    submit_bttn.addEventListener('click', () => {
+      var name_input = document.getElementById('NameInput').value;
+      var contact_input = document.getElementById('ContactInput').value;
+      output(str + "" + name_input + "" + contact_input);
+   }, true);
+}
+function output(hr) {
+  console.log(hr);
+}
+
+*/
+var helper = require('sendgrid').mail;
+var from_email = new helper.Email('jessepelzar@gmail.com');
+var to_email = new helper.Email('jessepelzar@gmail.com');
+var subject = 'test';
+var content = new helper.Content('text/plain', message);
+var mail = new helper.Mail(from_email, subject, to_email, content);
+
 
 
 /*

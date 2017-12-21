@@ -4,7 +4,7 @@
   <% include ../partials/header.ejs %>
 </head>
 
-<body style="margin:0">
+<body style="margin:0" id="body">
   <div class="container">
     <div id="start">
       <div class="cell">
@@ -22,17 +22,19 @@
           <li style="font-size: 1.5em; font-weight: 200;">Otherwise, select other</li>
         </ul>
             <div id="init_issue">
-              <button id="cracked_screen" type="button" onclick="initIssueRes(this.id); sScroll('model_select')"><img src="images/Screen_Cracked_Button.png"></button>
-              <button id="battery_dead" type="button" onclick="initIssueRes(this.id); sScroll('model_select')"><img src="images/Battery_Dead_Button.png"></button><br>
-              <button class="other" id="other_button" type="button" onclick="initIssueRes(this.id); sScroll('requests')"><img src="images/Other_Button.png"></button>
+              <input id="cracked_screen" type="image" onclick="initIssueRes(this.id); sScroll('model_select')" src="images/Screen_Cracked_Button.png">
+              <input id="battery_dead"   type="image" onclick="initIssueRes(this.id); sScroll('model_select')" src="images/Battery_Dead_Button.png">
+              <br>
+              <input id="other_button"   type="image" onclick="initIssueRes(this.id); sScroll('requests')" src="images/Other_Button.png">
+              <br>
             </div>
     </div>
 
     <div id="requests">
       <div class="cell">
           <p>Any additional info or requests</p>
-          <textarea type="text" rows="4" TextMode="MultiLine" placeholder="eg. My iPhone doesn't charge" id="userInput"=></textarea><br>
-          <button id="next_button" type="button" onclick="sScroll('model_select'), request()"><img src="images/Next_Button.png"></button>
+          <textarea type="text" rows="4" TextMode="MultiLine" placeholder="i.e. My iPhone doesn't charge" id="userInput"></textarea><br>
+          <button id="next_button" type="button" onclick="addRequest('userInput'); sScroll('model_select')"><img src="images/Next_Button.png"></button>
           </div>
     </div>
 
@@ -108,12 +110,12 @@
     <div class="UserInfo" id="UserInfo">
       <ul>
         <li>Your Name</li>
-        <li><textarea type="text" rows="1" TextMode="MultiLine" placeholder="Mary Poppins" id="NameInput"></textarea></li>
-        <br>
+        <input type="text" placeholder="Mary Poppins" id="NameInput">
+        <br><br>
         <li>Contact Info</li>
-        <li><textarea type="text" rows="1" TextMode="MultiLine" placeholder="Phone Number or Email" id="ContactInput"></textarea></li>
+        <input type="text" placeholder="Phone Number or Email" id="ContactInput">
       </ul>
-      <button id="submit" type="button" onclick="userInfo('NameInput', 'ContactInput'); alert('thanx');"><img src="images/Submit_Button.png"></button>
+      <input id="submit" type="submit" value="" onclick="addRequest('userInput'); sScroll('body')" src="images/Submit_Button.png">
     </div>
   </div>
 
