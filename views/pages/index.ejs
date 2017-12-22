@@ -44,36 +44,41 @@
           <li>Select your phone model</li>
           <li style="font-size: 1.5em; font-weight: 200;">(iPhone exclusive)</li>
         </ul>
-          <div id="model_buttons">
+          <label id="model_buttons">
             <ul>
               <li>
-                <div id="seven">
-                    <div class="col1" id="model_7" type="button" onclick="modelRes(this.id); sScroll('color_select')"><img src="images/iPhone_7_Button.png"></div>
-                    <div class="col2" id="model_7+" type="button" onclick="modelRes(this.id); sScroll('color_select')"><img src="images/iPhone_7_Plus_Button.png"></div>
-                </div>
+                <input class="col1" id="model_7" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
+                            <label for="model_7">7</label>
+                <input class="col2" id="model_7+" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
+                            <label for="model_7+">7+</label>
               </li>
               <li>
-                <div id="six_s">
-                    <div class="col1" id="model_6s" type="button" onclick="modelRes(this.id); sScroll('color_select')"><img src="images/iPhone_6s_Button.png"></div>
-                    <div class="col2" id="model_6s+" type="button" onclick="modelRes(this.id); sScroll('color_select')"><img src="images/iPhone_6s_Plus_Button.png"></div>
-                </div>
-                <div id="six">
-                    <div class="col1" id="model_6" type="button" onclick="modelRes(this.id); sScroll('color_select')"><img src="images/iPhone_6_Button.png"></div>
-                    <div class="col2" id="model_6+" type="button" onclick="modelRes(this.id); sScroll('color_select')"><img src="images/iPhone_6_Plus_Button.png"></div>
-                </div>
+                <input class="col1" id="model_6s" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
+                            <label for="model_6s">6s</label>
+                <input class="col2" id="model_6s+" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
+                            <label for="model_6s+">6s+</label>
               </li>
               <li>
-                <div id="five_s">
-                    <div class="col1" id="model_5s" type="button" onclick="modelRes(this.id); sScroll('color_select')"><img src="images/iPhone_5s_Button.png"></div>
-                    <div class="col2" id="model_5se" type="button" onclick="modelRes(this.id); sScroll('color_select')"><img src="images/iPhone_5se_Button.png"></div>
-                </div>
-                <div id="five">
-                    <div class="col1" id="model_5" type="button" onclick="modelRes(this.id); sScroll('color_select')"><img src="images/iPhone_5_Button.png"></div>
-                    <div class="col2" id="model_5c" type="button" onclick="modelRes(this.id); sScroll('color_select')"><img src="images/iPhone_5c_Button.png"></div>
-                </div>
+
+                <input class="col1" id="model_6" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
+                            <label for="model_6">6</label>
+                <input class="col2" id="model_6+" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
+                            <label for="model_6+">6+</label>
+              </li>
+              <li>
+                <input class="col1" id="model_5s" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
+                            <label for="model_5s">5s</label>
+                <input class="col2" id="model_5se" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
+                            <label for="model_5se">5se</label>
+              </li>
+              <li>
+                <input class="col1" id="model_5" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
+                            <label for="model_5">5</label>
+                <input class="col2" id="model_5c" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
+                            <label for="model_5c">5c</label>
               </li>
             </ul>
-          </div>
+          </label>
         </div>
     </div>
 
@@ -109,10 +114,10 @@
 
     <div class="UserInfo" id="UserInfo">
       <ul>
-        <li>Your Name</li>
+        <label style="font-size: 2em; font-weight: 300; padding-top: 1vh; padding-right: 5vh;">Your Name</label>
         <input type="text" placeholder="Mary Poppins" id="NameInput">
         <br><br>
-        <li>Contact Info</li>
+        <label style="font-size: 2em; font-weight: 300; padding-top: 1vh; padding-right: 5vh;">Contact Info</label>
         <input type="text" placeholder="Phone Number or Email" id="ContactInput">
       </ul>
       <input id="submit" type="submit" value="" onclick="addRequest('userInput'); sScroll('body')" src="images/Submit_Button.png">

@@ -43,10 +43,92 @@ body {
 
 button:focus {outline:0;}
 input:focus {outline:0;}
+
 button {
   background: none;
   border: none;
 }
+.class-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+
+.col1 {
+  position: absolute;
+  left: -9999px;
+  /*display: inline-block;*/
+  padding-top: 30vh;
+  padding-bottom: 30vh;
+}
+.col2 {
+  position: absolute;
+  left: -9999px;
+  /*display: inline-block;*/
+  padding-top: 30vh;
+  padding-bottom: 30vh;
+  margin-top: 3vh;
+}
+
+
+input[type=radio]:checked + label {
+  border-radius: 40vh;
+  background-color: #9e0477;
+  filter: invert(100%);
+}
+
+input[type=radio] + label {
+  border: none;
+}
+
+#model_buttons {
+  text-align: center;
+  margin: 0 0 0 0; /*top right bottom left*/
+  padding-bottom: 10vh;
+  vertical-align: middle;
+}
+
+ #model_buttons label {
+   width: 20vh;
+   height: 20vh;
+   line-height: 20vh;
+   display: block;
+   display: inline-block;
+   vertical-align: middle;
+   padding: none;
+   margin: 2.5vh 5vh 2.5vh 5vh;
+
+   border-radius: 100%;
+   border: 2px solid;
+   border-color: Black;
+   color: Black;
+
+   font-size: 7vh;
+   text-align: center;
+   font-weight: 300;
+   position: relative;
+ }
+
+
+ #model_buttons input {
+   width: 40vh;
+   height: inherit;
+   display: block;
+   display: inline-table;
+
+ }
+
+ #model_buttons div{
+   padding-top: 0vh;
+   display: inline-block;
+   vertical-align: middle;
+ }
+
+#model_buttons ul {
+  list-style-type: none;
+}
+
 
 br {
   line-height: 10vh;
@@ -72,7 +154,6 @@ ul {
 li {
   font-size: 2em;
   font-weight: 300;
-  padding-top: 1vh;
   padding-left: 5vh;
   padding-right: 5vh;
 }
@@ -176,22 +257,22 @@ p9 {
 }
 
 #cracked_screen {
-  width: 20%;
+  width: 32%;
   vertical-align: middle;
   float: 5% left;
 }
 
 #battery_dead {
-  width: 20%;
+  width: 32%;
   vertical-align: middle;
   float: 5% right;
 }
 
-#other {
+#other_button {
   width: 100%;
   vertical-align: middle;
   margin: 0 auto;
-  padding-bottom: 10vh;
+  padding-bottom: 3vh;
 }
 
 #requests {
@@ -229,27 +310,9 @@ p9 {
   vertical-align: middle;
 }
 
-#model_buttons {
-  text-align: center;
-  margin: 2vh 0 0 0; /*top right bottom left*/
-  padding-bottom: 10vh;
-  vertical-align: middle;
-}
-
- #model_buttons img {
-   width: 60%;
-   height: inherit;
-   display: block;
-   display: inline-table;
- }
-
- #model_buttons div{
-   padding-top: 3vh;
-   display: inline-block;
- }
-
-#model_buttons ul {
-  list-style-type: none;
+label > input { /* hide radio bttn */
+  visibility: hidden;
+  position: absolute;
 }
 
 #color_select {
@@ -349,28 +412,29 @@ p9 {
   width: 60vw;
   overflow: auto;
   line-height: 30px;
-  font-size: 3vh;
+  font-size: 2.5vh;
   font-weight: 300;
   color: #000;
   border-bottom: 2px;
   border-bottom-style: solid;
   border-color: Black;
-  padding-left: 5vh;
+
 }
 
 #UserInfo input::placeholder {
   line-height: 30px;
-  font-size: 3vh;
+  font-size: 2.5vh;
   font-weight: 300;
   color: #dfdfdf;
 }
 
 input[type=submit] {
   background: transparent url('https://i.imgur.com/ATIuXPy.png') no-repeat center scroll;
+  background-size: contain;
   border: none;
-
-  padding-top: 20vh;
+  padding-top: 25vh;
   margin: 0 auto;
   display: block;
-  width: 25vh;
+  text-align: center;
+  width: 20vh;
 }
