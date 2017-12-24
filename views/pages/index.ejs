@@ -6,83 +6,99 @@
 
 <body style="margin:0" id="body">
   <div class="container">
-    <div id="start">
+    <div class="stage" id="start">
       <div class="cell">
           <img id="logo" src="images/Logo.png">
           <h1 id="welcome">Welcome to</h1>
-          <button id="start_button" type="button" onclick="sScroll('issue_select')">Get Started</button>
-          <br>
+          <input id="start_button" type="reset" value="Get Started" onclick="sScroll('issue_select')">
       </div>
+      <br>
     </div>
 
-    <div id="issue_select">
+    <div class="stage" id="issue_select">
       <div class="cell">
         <ul>
           <li>Select from the options below</li>
           <li style="font-size: 1.5em; font-weight: 200;">Otherwise, select other</li>
         </ul>
             <div id="init_issue">
-              <input id="cracked_screen" type="image" onclick="initIssueRes(this.id); sScroll('model_select')" src="images/Screen_Cracked_Button.png">
-              <input id="battery_dead"   type="image" onclick="initIssueRes(this.id); sScroll('model_select')" src="images/Battery_Dead_Button.png">
+              <input id="cracked_screen" class="issue" type="image" onclick="crackedBttnSwap(); initIssueRes(this.id); sScroll('model_select')" src="https://i.imgur.com/X7LBfvc.png">
+              <input id="battery_dead"   class="issue" type="image" onclick="batteryBttnSwap(); initIssueRes(this.id); sScroll('model_select')" src="https://i.imgur.com/G0Il9Ur.png">
               <br>
-              <input id="other_button"   type="image" onclick="initIssueRes(this.id); sScroll('requests')" src="images/Other_Button.png">
+              <input id="other_button"   type="image" onclick="otherBttnSwap(); initIssueRes(this.id); sScroll('requests')" src="https://i.imgur.com/nxvapaK.png">
               <br>
             </div>
+      </div>
     </div>
 
-    <div id="requests">
+    <div class="stage" id="requests">
       <div class="cell">
-          <p>Any additional info or requests</p>
+        <div id="text">
+          <p2>Any additional info or requests</p2><br>
+        </div>
+        <div>
           <textarea type="text" rows="4" TextMode="MultiLine" placeholder="i.e. My iPhone doesn't charge" id="userInput"></textarea><br>
           <button id="next_button" type="button" onclick="addRequest('userInput'); sScroll('model_select')"><img src="images/Next_Button.png"></button>
-          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="model_select">
+    <div class="stage" id="model_select">
       <div class="cell">
         <ul>
           <li>Select your phone model</li>
-          <li style="font-size: 1.5em; font-weight: 200;">(iPhone exclusive)</li>
+          <li style="font-size: 1.5em; font-weight: 200;">(iPhone exclusive)</li><br>
         </ul>
+        <div>
           <label id="model_buttons">
-            <ul>
+            <ul class="grid" >
+              <li>
+                <input class="col1" id="model_8" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
+                            <label for="model_8">8</label>
+              </li>
+              <li>
+                <input class="col2" id="model_8+" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
+                            <label for="model_8+">8+</label>
+              </li>
               <li>
                 <input class="col1" id="model_7" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
                             <label for="model_7">7</label>
+              </li>
+              <li>
                 <input class="col2" id="model_7+" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
                             <label for="model_7+">7+</label>
               </li>
               <li>
                 <input class="col1" id="model_6s" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
                             <label for="model_6s">6s</label>
+              </li>
+              <li>
                 <input class="col2" id="model_6s+" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
                             <label for="model_6s+">6s+</label>
               </li>
               <li>
-
                 <input class="col1" id="model_6" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
                             <label for="model_6">6</label>
+              </li>
+              <li>
                 <input class="col2" id="model_6+" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
                             <label for="model_6+">6+</label>
               </li>
               <li>
                 <input class="col1" id="model_5s" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
                             <label for="model_5s">5s</label>
-                <input class="col2" id="model_5se" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
-                            <label for="model_5se">5se</label>
               </li>
               <li>
-                <input class="col1" id="model_5" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
-                            <label for="model_5">5</label>
-                <input class="col2" id="model_5c" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
-                            <label for="model_5c">5c</label>
+                <input class="col2" id="model_5se" type="radio" name="model" onclick="modelRes(this.id); sScroll('color_select')"/>
+                            <label for="model_5se">5se</label>
               </li>
             </ul>
           </label>
         </div>
+      </div>
     </div>
 
-    <div id="color_select">
+    <div class="stage" id="color_select">
       <div class="cell">
           <div id="box">
             <ul>
@@ -90,19 +106,20 @@
               <li style="color: White; font-size: 1.5em; font-weight: 200;">(The home button color)</li>
             </ul>
             <div id="color_choice">
-              <button id="black_screen" type="button" onclick="colorRes(this.id); sScroll('estimate')"><img src="images/iPhone_Black_Button.png"></button>
-              <button id="white_screen" type="button" onclick="colorRes(this.id); sScroll('estimate')"><img src="images/iPhone_White_Button.png"></button>
+              <input id="black_screen" type="image" onclick="blkBttnSwap(); colorRes(this.id); sScroll('estimate')" src="https://i.imgur.com/9bgYHck.png">
+              <input id="white_screen" type="image" onclick="whiteBttnSwap(); colorRes(this.id); sScroll('estimate')" src="https://i.imgur.com/OFffBeH.png">
+              <br>
             </div>
           </div>
           </div>
     </div>
 
-    <div id="estimate">
+    <div class="stage" id="estimate">
       <div class="cell">
-            <div id="cost">
+            <div id="text">
               <p1>Total Cost</p1>
               <br>
-              <p2>Screen repairs come with a free tempered glass screen protector</p2>
+              <p3>Screen repairs come with a free tempered glass screen protector</p3>
             </div>
             <div id="price_display">
                 <p8>$</p8>
@@ -114,17 +131,19 @@
 
     <div class="UserInfo" id="UserInfo">
       <ul>
+        <br>
         <label style="font-size: 2em; font-weight: 300; padding-top: 1vh; padding-right: 5vh;">Your Name</label>
         <input type="text" placeholder="Mary Poppins" id="NameInput">
         <br><br>
         <label style="font-size: 2em; font-weight: 300; padding-top: 1vh; padding-right: 5vh;">Contact Info</label>
         <input type="text" placeholder="Phone Number or Email" id="ContactInput">
       </ul>
-      <input id="submit" type="submit" value="" onclick="addRequest('userInput'); sScroll('body')" src="images/Submit_Button.png">
+      <input id="submit" type="submit" value="" onclick="reset(); addRequest('userInput'); sScroll('body')" src="images/Submit_Button.png">
     </div>
   </div>
 
   <script src="scripts/data.js"></script>
+  <script src="scripts/buttons.js"></script>
   <script src="scripts/estimate.js"></script>
   <script src="scripts/smoothScroll.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

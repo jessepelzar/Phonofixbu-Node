@@ -2,6 +2,8 @@ var issue_cracked = document.getElementById('cracked_screen');
 var issue_battery = document.getElementById('battery_dead');
 var issue_other = document.getElementById('other_button');
 var other_text = document.getElementById('userInput');
+var iPhone_8p = document.getElementById('model_8+');
+var iPhone_8 = document.getElementById('model_8');
 var iPhone_7p = document.getElementById('model_7+');
 var iPhone_7 = document.getElementById('model_7');
 var iPhone_6sp = document.getElementById('model_6s+');
@@ -10,23 +12,19 @@ var iPhone_6p = document.getElementById('model_6+');
 var iPhone_6 = document.getElementById('model_6');
 var iPhone_5se = document.getElementById('model_5se');
 var iPhone_5s = document.getElementById('model_5s');
-var iPhone_5c = document.getElementById('model_5c');
-var iPhone_5 = document.getElementById('model_5');
 var screen_black = document.getElementById('black_screen');
 var screen_white = document.getElementById('white_screen');
-
 var submit_bttn = document.getElementById('submit');
-
 var issue_sel = ["cracked screen", "battery replacement", "other"];
 var model_id = [
-      'model_5' , 'model_5c',
+      'model_8' , 'model_8+',
       'model_5s', 'model_5se',
       'model_6' , 'model_6+',
       'model_6s', 'model_6s+',
       'model_7' , 'model_7+'
     ];
 var model_sel = [
-      'iPhone 5' , 'iPhone 5c',
+      'iPhone 8' , 'iPhone 8 Plus',
       'iPhone 5s', 'iPhone 5se',
       'iPhone 6' , 'iPhone 6 Plus',
       'iPhone 6s', 'iPhone 6s Plus',
