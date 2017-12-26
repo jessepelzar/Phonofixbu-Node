@@ -163,6 +163,7 @@ h1 {
 }
 
 input[type=reset] {
+  background: #FFF;
   width: 30vh;
   border: 2px;
   border-style: solid;
@@ -281,20 +282,32 @@ input[type=image] {
   margin-top: 3vh;
 }
 
-input[type=radio]:checked + label {
+.grid input[type=radio]:checked + label {
   border-radius: 40vh;
   background-color: #9e0477;
   filter: invert(100%);
 }
-
-input[type=radio] + label {
+.grid input[type=radio] + label {
   border: none;
 }
 
+.grid ul{
+  width: 10vh;
+  list-style: flex;
+  display: grid;
+  text-align: justify;
+  grid-template-columns: repeat(auto-fill,minmax(80px, 5fr));
+  grid-template-rows: repeat(auto-fill),minmax(200px, 1fr));
+}
+.grid li {
+  border-radius: 5px;
+  display: inline-block;
+  padding: none;
+  margin: 0;
+}
 #model_buttons {
   text-align: center;
-  margin: 0 0 0 0; /*top right bottom left*/
-  padding-bottom: 10vh;
+  margin: 0 auto;; /*top right bottom left*/
   vertical-align: middle;
 }
 
@@ -319,60 +332,50 @@ input[type=radio] + label {
  position: relative;
 }
 
-.grid {
-    margin: 0 0 10vh 0;
-    padding: none;
-}
-
-.grid ul{
-  width: 10vh;
-  list-style: flex;
-  display: grid;
-  text-align: justify;
-  grid-template-columns: repeat(auto-fill,minmax(80px, 5fr));
-  grid-template-rows: repeat(auto-fill),minmax(200px, 1fr));
-}
-
-.grid li {
-  border-radius: 5px;
-  display: inline-block;
-  padding: none;
-  margin: 0;
-}
-
 /* ========================================================== */
 /* ========================================================== */
-
 .issue input{
   margin: 4vh;
   width: 40vh;
   margin-bottom: 0 auto;
   max-width: 200px;
 }
-
 #color_choice {
   text-align: center;
-  padding: 5vh;
-  margin: 0;
+  display: block;
+  position: relative;
+  margin-top: 10vh;
 }
 
-#black_screen {
-  width: 30vh;
+.radio_rem input{
+  position: absolute;
+  left: -9999px;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+#color_choice input[type=radio]:checked + label {
+  background-color: #61fb88;
+}
+#color_choice input[type=radio] + label {
+  background: none;
+}
+
+#color_choice label {
+  width: 20vh;
   max-width: 300px;
-  vertical-align: middle;
-  float: 6% left;
-  padding: 2vh;
+  height: 41.22vh;
+  max-height: 618.3vh;
+  text-align: center;
+  display: inline-block;
+  padding: 30px;
+  border-radius: 4vh;
+  border: 2px solid;
+  font-size: 5vh;
+  line-height: 25vh;
+  font-weight: 300;
+  margin: 5vh 5vw 5vh 5vw;
+  position: relative;
 }
-
-#white_screen{
-  width: 30vh;
-  max-width: 300px;
-  vertical-align: middle;
-  float: 6% right;
-  margin: 0 auto;
-  padding: 2vh;
-}
-
 
 /* ========================================================== */
 /* ========================================================== */

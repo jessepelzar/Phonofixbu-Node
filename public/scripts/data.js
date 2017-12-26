@@ -17,18 +17,19 @@ var screen_white = document.getElementById('white_screen');
 var submit_bttn = document.getElementById('submit');
 var issue_sel = ["cracked screen", "battery replacement", "other"];
 var model_id = [
-      'model_8' , 'model_8+',
       'model_5s', 'model_5se',
       'model_6' , 'model_6+',
       'model_6s', 'model_6s+',
-      'model_7' , 'model_7+'
+      'model_7' , 'model_7+',
+      'model_8' , 'model_8+'
     ];
 var model_sel = [
-      'iPhone 8' , 'iPhone 8 Plus',
+
       'iPhone 5s', 'iPhone 5se',
       'iPhone 6' , 'iPhone 6 Plus',
       'iPhone 6s', 'iPhone 6s Plus',
-      'iPhone 7' , 'iPhone 7 Plus'
+      'iPhone 7' , 'iPhone 7 Plus',
+      'iPhone 8' , 'iPhone 8 Plus'
     ];
 var color_sel = ['Black', 'White'];
 
@@ -75,10 +76,7 @@ function colorRes(color_bttn) {
 }
 
 submit_bttn.addEventListener('click', () => {
-  var one = initIssueRes();
-  var two = modelRes();
-  var three = colorRes();
-  console.log(one + two + three);
+
 });
 
 

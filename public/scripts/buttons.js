@@ -15,53 +15,68 @@ var dispPrice = document.getElementById('price');
 var screens = [iPhone_5s, iPhone_5se, iPhone_6, iPhone_6p, iPhone_6s, iPhone_6sp, iPhone_7, iPhone_7p, iPhone_8, iPhone_8p];
 
 var screen_prices =  ["60", "60", "60", "70", "70", "80", "80", "90", "100", "110"];
+var battery_prices =  ["25", "25", "25", "30", "35", "40", "45", "50", "55", "60"];
 dispPrice.innerHTML = "0";
 
+/// i can make a function that goes off when onclick. because
+// onclick reloads the function, i can just have it run through each condition
+// and only have to use one function
+
+// make the for loop its own function
+
+
 function crackedBttnSwap() {
+  // check for cracked screen selected then for each model selected after, display price
   if (document.getElementById('cracked_screen').src == 'https://i.imgur.com/X7LBfvc.png') {
-      document.getElementById('cracked_screen').src = 'https://i.imgur.com/zfp4i9q.png';
-      for (let i = 0; i < screens.length; i++) {
-        screens[i].addEventListener('click', () => {
-            var battery_price = battery_prices[i];
-            if (document.getElementById('battery_dead').src == 'https://i.imgur.com/LvlOmGn.png' && document.getElementById('battery_dead').src == 'https://i.imgur.com/LvlOmGn.png') {
-              dispPrice.innerHTML = parseInt(screen_price[i]) + parseInt(battery_price);
-            }
-            else {
-              dispPrice.innerHTML = screen_prices[i];
-            }
-        });
-      }
+        document.getElementById('cracked_screen').src = 'https://i.imgur.com/zfp4i9q.png';
+
+        for (let i = 0; i < screens.length; i++) {
+            screens[i].addEventListener('click', () => {
+                var battery_price = battery_prices[i];
+                // if both the battery button and screen button are selected, add the prices
+                if (document.getElementById('battery_dead').src == 'https://i.imgur.com/LvlOmGn.png') {
+                    dispPrice.innerHTML = parseInt(screen_prices[i]) + parseInt(battery_price);
+
+                }
+                // display just the screen price
+                else {
+                    dispPrice.innerHTML = screen_prices[i];
+                }
+            });
+        }
     console.log('if');
   }
+  // reset button on second click
   else if (document.getElementById('cracked_screen').src == 'https://i.imgur.com/zfp4i9q.png') {
-    document.getElementById('cracked_screen').src = 'https://i.imgur.com/X7LBfvc.png';
-    dispPrice.innerHTML = "0";
-    console.log('else');
+        document.getElementById('cracked_screen').src = 'https://i.imgur.com/X7LBfvc.png';
+        dispPrice.innerHTML = "0";
+        console.log('else');
   }
 }
-var battery_prices =  ["25", "25", "25", "30", "35", "40", "45", "50", "55", "60"];
+
+
 function batteryBttnSwap() {
   if (document.getElementById('battery_dead').src == 'https://i.imgur.com/G0Il9Ur.png') {
-    document.getElementById('battery_dead').src = 'https://i.imgur.com/LvlOmGn.png';
+      document.getElementById('battery_dead').src = 'https://i.imgur.com/LvlOmGn.png';
 
-    for (let i = 0; i < screens.length; i++) {
-      screens[i].addEventListener('click', () => {
-          var screen_price = screen_prices[i];
-          if (document.getElementById('battery_dead').src == 'https://i.imgur.com/LvlOmGn.png' && document.getElementById('battery_dead').src == 'https://i.imgur.com/LvlOmGn.png') {
-            dispPrice.innerHTML = parseInt(screen_price) + parseInt(battery_prices[i]);
-          }
-          else {
-            dispPrice.innerHTML = battery_prices[i];
-          }
-      });
+      for (let i = 0; i < screens.length; i++) {
+          screens[i].addEventListener('click', () => {
+              var screen_price = screen_prices[i];
+              if (document.getElementById('battery_dead').src == 'https://i.imgur.com/LvlOmGn.png' && document.getElementById('battery_dead').src == 'https://i.imgur.com/LvlOmGn.png') {
+                dispPrice.innerHTML = parseInt(screen_price) + parseInt(battery_prices[i]);
+              }
+              else {
+                dispPrice.innerHTML = battery_prices[i];
+              }
+          });
+      }
+      console.log('if');
     }
-    console.log('if');
-  }
-  else if (document.getElementById('battery_dead').src == 'https://i.imgur.com/LvlOmGn.png') {
-    document.getElementById('battery_dead').src = 'https://i.imgur.com/G0Il9Ur.png';
-    dispPrice.innerHTML = "0";
-    console.log('else');
-  }
+      else if (document.getElementById('battery_dead').src == 'https://i.imgur.com/LvlOmGn.png') {
+          document.getElementById('battery_dead').src = 'https://i.imgur.com/G0Il9Ur.png';
+          dispPrice.innerHTML = "0";
+          console.log('else');
+      }
 }
 
 function otherBttnSwap() {
@@ -90,7 +105,62 @@ function whiteBttnSwap() {
     document.getElementById('white_screen').src = 'https://i.imgur.com/OFffBeH.png';
   }
 }
+function submit() {
+  var crackedScreenSel = document.getElementById('cracked_screen').src ;
+  var batteryDeadSel = document.getElementById('battery_dead').src ;
+  var otherSel = document.getElementById('other_button').src ;
+  var otherReq = document.getElementById('userInput').value;
 
+  if (crackedScreenSel == 'https://i.imgur.com/zfp4i9q.png' && batteryDeadSel == 'https://i.imgur.com/LvlOmGn.png' && otherSel == 'https://i.imgur.com/2rxLjRb.png') {
+    var issue = "cracked and battery and " + otherReq;
+  }
+  else if (crackedScreenSel == 'https://i.imgur.com/zfp4i9q.png' && batteryDeadSel == 'https://i.imgur.com/LvlOmGn.png') {
+    var issue = "cracked and battery";
+  }
+  else if (batteryDeadSel == 'https://i.imgur.com/LvlOmGn.png' && otherSel == 'https://i.imgur.com/2rxLjRb.png') {
+    var issue = "battery and " + otherReq;
+  }
+  else if (crackedScreenSel == 'https://i.imgur.com/zfp4i9q.png' && otherSel == 'https://i.imgur.com/2rxLjRb.png') {
+    var issue = "cracked and " + otherReq;
+  }
+  else if (crackedScreenSel == 'https://i.imgur.com/zfp4i9q.png') {
+    var issue = "cracked iPhone screen repair";
+  }
+  else if (batteryDeadSel == 'https://i.imgur.com/LvlOmGn.png') {
+    var issue = "battery replcement";
+  }
+  else if (otherSel == 'https://i.imgur.com/2rxLjRb.png') {
+    var issue = otherReq;
+  }
+
+
+
+
+  else if (document.getElementById('userInput').value == "" && document.getElementById('other_button').src == 'https://i.imgur.com/2rxLjRb.png') {
+    alert('please specify the additional request or other issue you have');
+  }
+  else {
+    alert('thank you' + " " + name + " " + 'we will contact you shortly');
+  }
+//  var models = document.querySelector('input[name="model"]').value;
+  var models = document.forms[0];
+  for (var i = 0; i < models.length; i++) {
+    if (models[i].checked) {
+      var model = models[i].value;
+    }
+  }
+  var colors = document.forms[1];
+  for (var j = 0; j < colors.length; j++) {
+    if (colors[j].checked) {
+      var color = colors[j].value;
+    }
+  }
+
+  var name = document.querySelector('input[id="NameInput"]').value;
+  var contact = document.querySelector('input[id="ContactInput"]').value;
+  alert("thank you" + " " + name + ", we will contact you shortly via " + contact + "\n" + "your request was for a " + issue + " for a " + color + ", " + model);
+
+}
 
 
 function reset() {
