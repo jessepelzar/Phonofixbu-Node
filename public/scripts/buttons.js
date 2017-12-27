@@ -14,8 +14,8 @@ var iPhone_8 = document.getElementById('model_8');
 var dispPrice = document.getElementById('price');
 var screens = [iPhone_5s, iPhone_5se, iPhone_6, iPhone_6p, iPhone_6s, iPhone_6sp, iPhone_7, iPhone_7p, iPhone_8, iPhone_8p];
 
-var screen_prices =  ["60", "60", "60", "70", "70", "80", "80", "90", "100", "110"];
-var battery_prices =  ["25", "25", "25", "30", "35", "40", "45", "50", "55", "60"];
+var screen_prices  =  ["60", "60", "60", "70", "70", "80", "80", "90", "100", "110"];
+var battery_prices =  ["25", "25", "25", "30", "35", "40", "45", "50", "55",  "60" ];
 dispPrice.innerHTML = "0";
 
 /// i can make a function that goes off when onclick. because
@@ -23,6 +23,14 @@ dispPrice.innerHTML = "0";
 // and only have to use one function
 
 // make the for loop its own function
+
+// check what buttons are selected
+//
+// calculate the price of each
+//
+// sum up the prices if multiple buttons are selected
+
+//maybe make a recursive function that will keep checking if if any other buttons have been selected and then update
 
 
 function crackedBttnSwap() {
@@ -36,7 +44,6 @@ function crackedBttnSwap() {
                 // if both the battery button and screen button are selected, add the prices
                 if (document.getElementById('battery_dead').src == 'https://i.imgur.com/LvlOmGn.png') {
                     dispPrice.innerHTML = parseInt(screen_prices[i]) + parseInt(battery_price);
-
                 }
                 // display just the screen price
                 else {
@@ -62,8 +69,8 @@ function batteryBttnSwap() {
       for (let i = 0; i < screens.length; i++) {
           screens[i].addEventListener('click', () => {
               var screen_price = screen_prices[i];
-              if (document.getElementById('battery_dead').src == 'https://i.imgur.com/LvlOmGn.png' && document.getElementById('battery_dead').src == 'https://i.imgur.com/LvlOmGn.png') {
-                dispPrice.innerHTML = parseInt(screen_price) + parseInt(battery_prices[i]);
+              if (document.getElementById('cracked_screen').src == 'https://i.imgur.com/zfp4i9q.png') {
+                dispPrice.innerHTML = parseInt(battery_prices[i]);
               }
               else {
                 dispPrice.innerHTML = battery_prices[i];
@@ -160,8 +167,20 @@ function submit() {
   var contact = document.querySelector('input[id="ContactInput"]').value;
   alert("thank you" + " " + name + ", we will contact you shortly via " + contact + "\n" + "your request was for a " + issue + " for a " + color + ", " + model);
 
+
 }
 
+
+
+// sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+// const msg = {
+//   to: 'jessepelzar@gmail.com',
+//   from: 'jessepelzar@gmail.com',
+//   subject: 'Hello world',
+//   text: 'Hello plain world!',
+//   html: '<p>Hello HTML world!</p>',
+// };
+// sgMail.send(msg);
 
 function reset() {
   document.getElementById('cracked_screen').src = 'https://i.imgur.com/X7LBfvc.png';
