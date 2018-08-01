@@ -265,6 +265,17 @@ input[type=image] {
   vertical-align: middle;
 }
 
+#done_button  {
+  width: 20vh;
+  max-width: 200px;
+  margin-bottom: 5vh;
+}
+
+#done_button img{
+  width: 20vh;
+  vertical-align: middle;
+}
+
 /* ========================================================== */
 /* ========================================================== */
 
@@ -446,13 +457,17 @@ input[type=image] {
   color: #dfdfdf;
 }
 
-input[type=submit] {
-  background: transparent url('https://i.imgur.com/ATIuXPy.png') no-repeat center scroll;
-  background-size: contain;
-  border: none;
-  padding-top: 25vh;
+
+#UserInfo input[value=Submit] {
+  color: Black;
+  border-color: Black;
+  border: 2px solid;
+  border-radius: 25vh;
+  padding: 2vh 4vh 2vh 4vh;
   margin: 0 auto;
-  display: block;
+  margin-top: 14vh;
+  font-size: 3vh;
   text-align: center;
-  width: 20vh;
+  display: block;
+  position: relative;
 }

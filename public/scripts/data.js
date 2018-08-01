@@ -75,10 +75,6 @@ function colorRes(color_bttn) {
   return color_bttn;
 }
 
-submit_bttn.addEventListener('click', () => {
-
-});
-
 
 
 
@@ -139,13 +135,6 @@ function output(hr) {
 }
 
 */
-var helper = require('sendgrid').mail;
-var from_email = new helper.Email('jessepelzar@gmail.com');
-var to_email = new helper.Email('jessepelzar@gmail.com');
-var subject = 'test';
-var content = new helper.Content('text/plain', message);
-var mail = new helper.Mail(from_email, subject, to_email, content);
-
 
 
 /*
