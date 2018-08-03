@@ -48,65 +48,7 @@ function crackedBttnSwap() {
     issueScreen = 0;
   }
 }
-// window.onload = function() {
-//   document.getElementById("cracked_screen").onclick = function() {
-//     //crackedBttnSwap();
-//     alert("fksjfdbk");
-//   }
-// }
-/*
-window.addEventListener('click', function(event) {
-    var dropdownHamburgerList = document.getElementById('cracked_screen');
-    //var dropdownHamburgerParent = document.getElementsByClassName('hamimg');
-    //var hamburgerList = dropdownHamburgerList[0];
-    if (event.target == dropdownHamburgerList) {
-        alert('test');
-    }
-});*/
-/*
-function f1() {
-  var AWS = require('aws-sdk');
-  AWS.config.update({
-    accessKeyId: "AKIAIWBC6NAV7LWTHVRA",
-    secretAccessKey: "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",
-    region: 'us-east-1'
-  });
-  var ses_mail = "From: 'AWS SES Attchament Configuration' <" + 'mail@aaaidphoto.com' + ">\n";
-    ses_mail += "--NextPart--";
 
-  var params = {
-    Destinations: ['phonofixbu@gmail.com'],
-    RawMessage: {
-      Data: ses_mail,
-    },
-    Source: 'jessepelzar@gmail.com',
-  };
-  new AWS.SES({
-    apiVersion: '2010-12-01'
-  }).sendRawEmail(params, function(err, data) {
-    if (err) {
-      console.log(err, err.stack);
-      alert("Email failed to send, Please make sure you enter a valid email address.")
-      // spawn resend email button display: block in css display: none
-      //set onclick of that button to generate_email
-    }
-    else {
-      console.log(data);
-      //switch_to_receipt();
-    }
-
-  });
-    alert("f1 called");
-    //form validation that recalls the page showing with supplied inputs.
-}
-window.onload = function() {
-    document.getElementById("butt").onclick = function fun() {
-        alert("hello");
-        f1();
-        //validation code to see State field is mandatory.
-    }
-}
-*/
 function batteryBttnSwap() {
   if (document.getElementById('battery_dead').src == 'https://i.imgur.com/G0Il9Ur.png') {
     document.getElementById('battery_dead').src = 'https://i.imgur.com/LvlOmGn.png';
