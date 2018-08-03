@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <% include ../partials/header.ejs %>
+  <link rel="stylesheet" href="stylesheets/stylesheet.css">
+  <link rel="list-style" href="stylesheets/list-style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900|Quicksand:300,400,500,700|Raleway:100,200,300,400,500,700,900|Roboto:100,200,300,400,500" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+  <title>PhonofixBU</title>
 </head>
 
 <body style="margin:0" id="body">
@@ -11,6 +16,7 @@
           <img id="logo" src="images/Logo.png">
           <h1 id="welcome">Welcome to</h1>
           <input id="start_button" type="reset" value="Get Started" onclick="reset(); sScroll('issue_select')">
+
       </div>
       <br>
     </div>
@@ -22,7 +28,8 @@
           <li style="font-size: 1.5em; font-weight: 200;">Otherwise, select other</li>
         </ul>
             <div id="init_issue">
-              <input id="cracked_screen" class="issue" type="image" onclick="crackedBttnSwap(); initIssueRes(this.id); sScroll('model_select'); return false;" src="https://i.imgur.com/X7LBfvc.png">
+<!--onclick="crackedBttnSwap(); initIssueRes(this.id); sScroll('model_select'); return false;"-->
+              <input id="cracked_screen" class="issue" type="image"  onclick="crackedBttnSwap(); initIssueRes(this.id); sScroll('model_select'); return false;" src="https://i.imgur.com/X7LBfvc.png" >
               <input id="battery_dead"   class="issue" type="image" onclick="batteryBttnSwap(); initIssueRes(this.id); sScroll('model_select'); return false;" src="https://i.imgur.com/G0Il9Ur.png">
               <br>
               <input id="other_button"   type="image" onclick="otherBttnSwap(); initIssueRes(this.id); sScroll('requests'); return false;" src="https://i.imgur.com/nxvapaK.png">
@@ -143,14 +150,16 @@
         <label style="font-size: 2em; font-weight: 300; padding-top: 1vh; padding-right: 5vh;">Contact Info</label>
         <input type="text" placeholder="Phone Number or Email" id="ContactInput">
       </ul>
-      <input id="submit" type="button" value="Submit" onclick="submit(); reset(); addRequest('userInput'); sScroll('body')"/>
+      <input id="submit" type="button" value="Submit" onclick="generate_email(); submitForm(); reset(); addRequest('userInput'); sScroll('body')"/>
     </div>
   </div>
 </form>
-  <script src="scripts/data.js"></script>
+  <!--script type="module" src="scripts/buttons.js"></script-->
+<!--script type="text/javascript" src="./bundle.js"></script-->
   <script src="scripts/buttons.js"></script>
+  <script src="scripts/data.js"></script>
   <script src="scripts/smoothScroll.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!--script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script-->
   <!--script type="text/javascript" src="materialize/js/materialize.min.js"></script-->
 </body>
 
