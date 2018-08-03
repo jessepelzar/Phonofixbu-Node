@@ -8,8 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "browserify ./src/scripts/buttons.js ./src/scripts/data.js ./src/scripts/smoothScroll.js -o bundle.js"
+    "start": "node index.js"    
   },
   "dependencies": {
     "async": "^2.6.0",
