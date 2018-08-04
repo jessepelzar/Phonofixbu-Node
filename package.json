@@ -24,9 +24,7 @@
     "requirejs": "^2.3.5",
     "sendgrid": "^5.2.3",
     "socket.io": "^2.0.4",
-    "verbose": "^0.2.3",
-    "sockjs": "0.3.7",
-    "sockjs-client": "1.1.4"
+    "verbose": "^0.2.3"
   },
   "publishConfig": {
     "access": "public"
