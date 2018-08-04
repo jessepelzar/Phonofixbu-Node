@@ -34,8 +34,6 @@ dispPrice.innerHTML = "0";
 var issueScreen = 0;
 var issueBattery = 0;
 
-
-
 function crackedBttnSwap() {
   // check for cracked screen selected then for each model selected after, display price
   if (document.getElementById('cracked_screen').src == 'https://i.imgur.com/X7LBfvc.png') {
@@ -98,7 +96,7 @@ function update() {
   if (issueScreen == 0 && issueBattery == 0) {
     dispPrice.innerHTML = 0;
   }
-  if (issueScreen == 1) {
+  if (issueScreen == 1 ) {
     for (var i = 0; i < models.length; i++) {
       if (models[i].checked) {
         var model = models[i].value;
@@ -106,7 +104,7 @@ function update() {
       }
     }
   }
-  if (issueBattery == 1) {
+  if (issueBattery == 1 ) {
     for (var i = 0; i < models.length; i++) {
       if (models[i].checked) {
         var model = models[i].value;
@@ -122,9 +120,11 @@ function update() {
       }
     }
   }
+
+
 }
 
-function submitForm() {
+function submit() {
   var crackedScreenSel = document.getElementById('cracked_screen').src;
   var batteryDeadSel = document.getElementById('battery_dead').src;
   var otherSel = document.getElementById('other_button').src;
@@ -170,9 +170,23 @@ function submitForm() {
 
 }
 
-/// create a temp var that = 1 when a button func is called. each button func calls another function that turns the price_display to a button that says refresh, when refresh is pressed the price is displayed
+/* MAIL INFORMATION
+ * Fill in the relevant information below
+ *===========================================*/
+// YOUR SENDING ADDRESS
+var from_address = "Automail@phonofixbu.com";
 
+// YOUR TO ADDRESS(ES)
+var to_address = "jessepelzar@gmail.com";
 
+// SUBJECT
+var subject = "iphone request";
+
+// TEXT BODY
+var text_body = "test";
+
+// HTML BODY
+var html_body = "<table style=\"border: solid 1px #000; background-color: #666; font-family: verdana, tahoma, sans-serif; color: #fff;\"> <tr> <td> <h2>Hello,</h2> <p>This is a test message from SendGrid.    We have sent this to you because you requested a test message be sent from your account.</p> <a href=\"http://www.google.com\" target=\"_blank\">This is a link to google.com</a> <p> <a href=\"http://www.apple.com\" target=\"_blank\">This is a link to apple.com</a> <p> <a href=\"http://www.sendgrid.com\" target=\"_blank\">This is a link to sendgrid.com</a> </p> <p>Thank you for reading this test message.</p> Love,<br/> Your friends at SendGrid</p> <p> <img src=\"http://cdn1.sendgrid.com/images/sendgrid-logo.png\" alt=\"SendGrid!\" /> </td> </tr> </table>";
 
 
 function reset() {
@@ -182,13 +196,3 @@ function reset() {
   document.getElementById('black_screen').src = 'https://i.imgur.com/9bgYHck.png';
   document.getElementById('white_screen').src = 'https://i.imgur.com/OFffBeH.png';
 }
-
-// 
-// window.submitForm = submitForm;
-// window.crackedBttnSwap = crackedBttnSwap;
-// window.batteryBttnSwap = batteryBttnSwap;
-// window.otherBttnSwap = otherBttnSwap;
-// window.blkBttnSwap = blkBttnSwap;
-// window.whiteBttnSwap = whiteBttnSwap;
-// window.update = update;
-// window.reset = reset;

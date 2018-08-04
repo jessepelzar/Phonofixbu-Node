@@ -75,12 +75,6 @@ function colorRes(color_bttn) {
   return color_bttn;
 }
 
-//window.onload = function() {
-  // document.getElementById("cracked_screen").onclick = function() {
-  //   //crackedBttnSwap();
-  //   alert("fksjfdbk");
-  // }
-//}
 
 
 
