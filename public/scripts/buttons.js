@@ -183,12 +183,12 @@ function reset() {
   document.getElementById('white_screen').src = 'https://i.imgur.com/OFffBeH.png';
 }
 
-window.generate_email = generate_email;
-window.submitForm = submitForm;
-window.crackedBttnSwap = crackedBttnSwap;
-window.batteryBttnSwap = batteryBttnSwap;
-window.otherBttnSwap = otherBttnSwap;
-window.blkBttnSwap = blkBttnSwap;
-window.whiteBttnSwap = whiteBttnSwap;
-window.update = update;
-window.reset = reset;
+// 
+// window.submitForm = submitForm;
+// window.crackedBttnSwap = crackedBttnSwap;
+// window.batteryBttnSwap = batteryBttnSwap;
+// window.otherBttnSwap = otherBttnSwap;
+// window.blkBttnSwap = blkBttnSwap;
+// window.whiteBttnSwap = whiteBttnSwap;
+// window.update = update;
+// window.reset = reset;
