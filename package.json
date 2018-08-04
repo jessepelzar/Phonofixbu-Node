@@ -17,6 +17,7 @@
     "ejs": "2.5.7",
     "express": "4.16.2",
     "handlebars": "4.0.11",
+    "iconv-lite": "^0.4.23",
     "raw-body": "^2.3.3"
   },
   "publishConfig": {
