@@ -6,15 +6,14 @@
   "engines": {
     "node": "8.0.0"
   },
-  "main": "index.js",
+  "main": "scripts/buttons.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node test.js"
   },
   "dependencies": {
     "async": "^2.6.0",
-    "aws-sdk": "^2.284.1",
     "bluebird": "^3.5.1",
-    "body-parser": "^1.18.3",
     "cli": "^1.0.1",
     "ejs": "^2.5.7",
     "email-templates": "^3.2.0",
@@ -25,41 +24,18 @@
     "requirejs": "^2.3.5",
     "sendgrid": "^5.2.3",
     "socket.io": "^2.0.4",
-    "verbose": "^0.2.3",
-    "babel-preset-es2015": "6.24.1",
-    "css-loader": "0.28.10",
-    "jquery": "3.3.1",
-    "mailcomposer": "4.0.2",
-    "mandrill-api": "1.0.45",
-    "node-sass": "4.7.2",
-    "sass-loader": "6.0.7",
-    "webpack-dev-server": "3.1.0",
-    "webpack-php-loader": "0.5.0"
+    "verbose": "^0.2.3"
   },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
-    "babel-core": "6.26.0",
-    "babel-loader": "7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "browserify": "^16.2.2",
-    "compression-webpack-plugin": "1.1.11",
-    "copy-webpack-plugin": "4.5.1",
-    "extract-text-webpack-plugin": "4.0.0-beta.0",
-    "html-webpack-plugin": "3.0.6",
-    "postcss-loader": "2.1.1",
     "request": "^2.83.0",
-    "style-loader": "0.20.3",
-    "tape": "^4.8.0",
-    "uglifyjs-webpack-plugin": "1.2.5",
-    "url-loader": "1.0.1",
-    "webpack": "4.1.1",
-    "webpack-cli": "2.0.10"
+    "tape": "^4.8.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jessepelzar/Phonofixbu-Node"
+    "url": "https://github.com/jessepelzar/phonofixbu-node"
   },
   "keywords": [
     "screen",
