@@ -16,7 +16,8 @@
     "cli": "1.0.1",
     "ejs": "2.5.7",
     "express": "4.16.2",
-    "handlebars": "4.0.11"
+    "handlebars": "4.0.11",
+    "raw-body": "^2.3.3"
   },
   "publishConfig": {
     "access": "public"
